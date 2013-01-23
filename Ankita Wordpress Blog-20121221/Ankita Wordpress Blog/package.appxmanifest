@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Package xmlns="http://schemas.microsoft.com/appx/2010/manifest">
+  <Identity Name="36977kulkarniankita.AnkitaKulkarniWordpressBlog" Version="1.0.0.3" Publisher="CN=5DFCC599-6797-4B6F-8B3A-A02A112877A2" />
+  <Properties>
+    <DisplayName>Ankita Kulkarni Wordpress Blog</DisplayName>
+    <Description>Technology Blog</Description>
+    <PublisherDisplayName>kulkarniankita</PublisherDisplayName>
+    <Logo>images\storelogo.png</Logo>
+  </Properties>
+  <Prerequisites>
+    <OSMinVersion>6.2.0</OSMinVersion>
+    <OSMaxVersionTested>6.2.0</OSMaxVersionTested>
+  </Prerequisites>
+  <Resources>
+    <Resource Language="x-generate" />
+  </Resources>
+  <Applications>
+    <Application Id="App" StartPage="default.html">
+      <VisualElements DisplayName="Ankita Kulkarni Wordpress Blog" Logo="images\logo.jpg" SmallLogo="images\smalllogo.png" Description="Ankita Kulkarni Wordpress Blog" ForegroundText="dark" BackgroundColor="#ffffff" ToastCapable="true">
+        <DefaultTile ShowName="noLogos" WideLogo="images\widelogo.jpg" ShortName="Ankita Kulkarni's Blog" />
+        <SplashScreen Image="images\splash.jpg" BackgroundColor="#00649D" />
+        <InitialRotationPreference>
+          <Rotation Preference="portrait" />
+          <Rotation Preference="landscape" />
+          <Rotation Preference="portraitFlipped" />
+          <Rotation Preference="landscapeFlipped" />
+        </InitialRotationPreference>
+      </VisualElements>
+      <Extensions>
+        <Extension Category="windows.search" />
+      </Extensions>
+    </Application>
+  </Applications>
+  <Capabilities>
+    <Capability Name="internetClient" />
+  </Capabilities>
+</Package>

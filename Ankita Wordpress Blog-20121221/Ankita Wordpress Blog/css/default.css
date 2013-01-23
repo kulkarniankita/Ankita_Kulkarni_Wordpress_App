@@ -1,0 +1,296 @@
+﻿html {
+    cursor: default;
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    font: 11pt/15pt "Segoe UI";
+    background-color: #00649D;
+    background-image: url('/images/wpbg.png');
+    background-size: cover;
+    color: #000;
+    height: 100%;
+    width: 100%;
+}
+
+#contenthost {
+    height: 100%;
+    width: 100%;
+}
+
+/* colors */
+.theme-color, a, a:link, a:visited {
+    color: #ff6102 !important; /* link */
+}
+
+    a:active, article a:hover {
+        color: #ffd800; /* mouse over link */
+    }
+
+.theme-bg-color {
+    background-color: #ff6102 !important;
+}
+
+.fragment progress.win-ring {
+    color: #ff6102;
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    left: calc(50% - 50px);
+    top: calc(50% - 50px);
+}
+
+/* layout and headers */
+.fragment {
+    display: -ms-grid;
+    -ms-grid-columns: 1fr;
+    -ms-grid-rows: 140px 1fr;
+    height: 100%;
+}
+
+header[role=banner] {
+    -ms-grid-row: 1;
+    /* Define a grid with columns for the back button and page title. */
+    display: -ms-grid;
+    -ms-grid-columns: 120px 400px 1fr;
+    -ms-grid-rows: 1fr;
+}
+
+    header[role=banner] .win-backbutton {
+        margin-left: 39px;
+        margin-top: 69px;
+    }
+
+    header[role=banner] .titlearea {
+        -ms-grid-column: 2;
+        margin-top: 48px;
+        height: 72px;
+        margin-right: 35px;
+        margin-left: -4px;
+    }
+
+    header[role=banner] .titleImage {
+        display: none;
+        height: 80px;
+    }
+
+    header[role=banner].showImage .titleImage {
+        display: block;
+        margin-left: -5px;
+    }
+
+    header[role=banner].showImage .pagetitle {
+        display: none;
+    }
+
+    header[role=banner] .titlearea {
+        overflow: visible;
+    }
+
+        header[role=banner] .titlearea .pagetitle {
+            width: calc(100% - 20px);
+            letter-spacing: 0;
+        }
+
+
+section[role=main] {
+    height: 100%;
+    width: 100%;
+    -ms-grid-row: 2;
+}
+
+
+/* icons and buttons */
+
+.win-body {
+    font-size: 11pt;
+    font-weight: 300;
+}
+
+.win-backbutton {
+    border-color: black;
+    color: black;
+}
+
+    .win-backbutton:hover {
+        border-color: black;
+        background-color: #666;
+        color: black;
+    }
+
+    .win-backbutton:active {
+        border-color: black;
+        background-color: #fff;
+        color: black;
+    }
+
+.win-ui-dark .win-backbutton {
+    border-color: white;
+    color: white;
+}
+
+.win-ui-dark .win-label {
+    border-color: white;
+    color: white;
+}
+
+
+#refresh .win-commandimage::before {
+    content: "\e149";
+}
+
+#like .win-commandimage::before {
+    content: "\e0b4";
+}
+
+#viewblog {
+    float: right;
+}
+
+    #viewblog .win-commandimage::before {
+        content: "\e17c";
+    }
+
+    #viewblog.open-in-browser .win-commandimage::before {
+        content: "\e17c";
+    }
+
+#home .win-commandimage::before {
+    content: "\e10f";
+}
+
+
+.win-appbar #viewblog.open-in-browser .win-commandimage {
+    margin-top: -4px;
+    margin-left: -1px;
+    margin-right: -1px;
+    font-size: 13pt;
+}
+
+#viewblog.open-in-browser .win-commandicon {
+    background: none;
+}
+
+.win-commandicon {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 32px, 32px;
+    font-family: "Segoe UI Symbol";
+}
+
+.win-command {
+    white-space: nowrap;
+}
+
+    .win-command.selected .win-commandicon,
+    .win-command:hover:active .win-commandicon {
+        background-color: #fff;
+    }
+
+    .win-command.selected .win-commandimage::before,
+    .win-command:hover:active .win-commandimage::before {
+        color: #ff6102;
+    }
+
+.win-appbar {
+    background-color: #2b2b2b;
+}
+
+    .win-appbar .win-commandimage {
+        margin-top: -3px;
+    }
+
+.hide {
+    display: none;
+}
+
+.show {
+    display: block;
+}
+
+.win-contentcaption {
+    font-size: 9pt;
+}
+
+
+div.error {
+    width: 100%;
+    position: absolute;
+    margin: 0 auto 0 auto;
+    text-align: center;
+    top: 45%;
+    color: #fff;
+}
+
+
+@media screen and (-ms-view-state: fullscreen-portrait) {
+    header[role=banner] {
+        -ms-grid-columns: 100px 400px 1fr;
+    }
+
+        header[role=banner] .win-backbutton {
+            margin-left: 29px;
+        }
+}
+
+@media (-ms-high-contrast) {
+    .win-commandicon {
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 32px, 32px;
+        font-family: "Segoe UI Symbol";
+    }
+
+    .selected .win-commandicon {
+        background-color: #fff;
+    }
+
+    .selected .win-commandimage::before {
+        color: #000;
+    }
+}
+
+@media screen and (-ms-view-state: snapped) {
+    .fragment {
+        display: -ms-grid;
+        -ms-grid-columns: 1fr;
+        -ms-grid-rows: 70px 1fr 0px;
+    }
+
+    header[role=banner] {
+        display: block;
+    }
+
+        header[role=banner] .titlearea {
+            float: left;
+            margin-top: 20px;
+            height: 44px;
+            width: 210px;
+            overflow: visible;
+        }
+
+        header[role=banner] .title {
+            width: 210px;
+            -ms-text-overflow: ellipsis;
+            overflow: hidden;
+            display: block;
+        }
+
+        header[role=banner] .win-backbutton {
+            float: left;
+            margin-top: 25px;
+            margin-left: 20px;
+            margin-right: 20px;
+        }
+
+            header[role=banner] .win-backbutton[disabled=disabled] {
+                margin-left: 0px;
+                margin-right: 9px;
+            }
+
+        header[role=banner].showImage .titleImage {
+            height: 42px;
+            margin-left: 1px;
+        }
+}
